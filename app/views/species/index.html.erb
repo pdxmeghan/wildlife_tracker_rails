@@ -6,7 +6,7 @@
 
 <ul>
   <% ordered_species.each do |species| %>
-    <li><%= species.name %> |
+    <li><a href="/species/<%= species.id %>"><%= species.name %></a> |
     <a href="species/<%= species.id%>/edit">Edit</a> |
     <a href="species/<%= species.id%>"
         data-confirm = "ARE YOU SURE?"
