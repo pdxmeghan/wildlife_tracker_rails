@@ -2,8 +2,15 @@
 
 <h2>Currently Tracked Species:</h2>
 
+<% ordered_species = @species.sort_by {|species| species.id}%>
+
 <ul>
-  <% @species.each do |species| %>
-    <li><%= species.name %></li>
+  <% ordered_species.each do |species| %>
+    <li><%= species.name %> |
+    <a href="species/<%= species.id%>/edit">Edit</a> |
+    <a href="species/<%= species.id%>/delete">Delete</a>
+    </li>
   <% end %>
 </ul>
+
+<p><a href="species/new">Add a new species</a></p>
