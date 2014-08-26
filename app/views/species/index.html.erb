@@ -8,7 +8,10 @@
   <% ordered_species.each do |species| %>
     <li><%= species.name %> |
     <a href="species/<%= species.id%>/edit">Edit</a> |
-    <a href="species/<%= species.id%>/delete">Delete</a>
+    <a href="species/<%= species.id%>"
+        data-confirm = "ARE YOU SURE?"
+        data-method="delete"
+        rel="nofollow">Delete</a>
     </li>
   <% end %>
 </ul>
