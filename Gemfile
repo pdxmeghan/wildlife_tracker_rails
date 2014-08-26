@@ -12,6 +12,7 @@ gem 'jbuilder'
 gem 'sdoc'
 gem 'pry'
 gem 'spring'
+gem 'validates_timeliness', '~> 3.0'
 
 group :development do
   gem 'better_errors'
